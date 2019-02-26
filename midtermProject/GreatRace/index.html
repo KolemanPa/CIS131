@@ -8,13 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <img src="images/greenlight.png" alt="active light"  id="displayLight">
+    <div id="displayLight">
+        <img id="display" src="images/redlight.png" style="height:100px">
     </div>
 
-    <input type="image" alt="greenlight" class="light" id="greenLight" src="images/greenlight.png">
-    <input type="image" src="images/redLight.png" alt="redlight" class="light" id="redLight">
-    <input type="image" src="images/yellowlight.png" alt="yellowlight" class="light" id="yellowLight">
+
+    <input type="image" alt="greenlight" class="light" onclick="document.getElementById('display').src='images/greenlight.png'" id="greenLight" src="images/greenlight.png">
+    <input type="image" src="images/redLight.png" alt="redlight" class="light" id="redLight" onclick="document.getElementById('display').src='images/redlight.png'">
+    <input type="image" src="images/yellowlight.png" alt="yellowlight" class="light" id="yellowLight" onclick="document.getElementById('display').src='images/yellowlight.png'">
     <!-- <img src="images/greenlight.png" alt="greenlight" class="light" id="greenLight">
     <img src="images/redLight.png" alt="redlight" class="light" id="redLight">
     <img src="images/yellowlight.png" alt="yellowlight" class="light" id="yellowLight"> -->
