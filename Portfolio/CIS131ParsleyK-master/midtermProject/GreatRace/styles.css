@@ -1,0 +1,13 @@
+.light{
+    height: 100px;
+    float: right;
+}
+#displayLight{
+    float: left;
+}
+
+body {
+    background-image: url("images/beach2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
