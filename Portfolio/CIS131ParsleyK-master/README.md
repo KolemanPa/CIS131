@@ -1,3 +1,0 @@
-# CIS 131 Repository!
-##KOLEMAN PARSLEY
-<h1>SOMETHING TO MODIFY</h1>
