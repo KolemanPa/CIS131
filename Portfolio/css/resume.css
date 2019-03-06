@@ -190,3 +190,12 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+nav{
+  position: absolute;
+  top: 0px;
+}
+
+.resumeStuff{
+  display:none;
+}
