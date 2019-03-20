@@ -1,0 +1,15 @@
+{
+  "name": "anewthang",
+  "version": "1.0.0",
+  "description": "my first package exploration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KolemanPa",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "uniq": "^1.0.1"
+  }
+}
