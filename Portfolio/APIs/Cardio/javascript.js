@@ -8,12 +8,18 @@ httpRequest.onreadystatechange = rockets;
 
 
 
+
+var i =0;
 function rockets(){
+
+    var maxRocket = JSON.parse(httpRequest.responseText);
+    var max = maxRocket.count;
+    console.log(max);
+    for(var i = 0; i<max; i++){
     if(httpRequest.readyState == 4 && httpRequest.status == 200){
-        // for(var i =0; i>4;i++){
         var rocketObj = JSON.parse(httpRequest.responseText);
-        console.log(rocketObj);
-        document.getElementById(`rocket1`).innerHTML = rocketObj.launches[0].name;
+        document.getElementById(`rocket${i}name`).innerHTML = rocketObj.launches[i].rocket.name;
+        document.getElementById(`rocket${i}Info`).innerHTML = rocketObj.launches[i].windowstart;
     };
     };
-// };
+};
