@@ -3,6 +3,7 @@
 // ^^^^^^^ IMPORTANT ^^^^^^^^^^
 
 $(document).ready(function(){
+    alert("HEY");
     // $("#heading").html("waddup");
     // $("p").click(function (){
     //     $("p").html("i was clicked");
