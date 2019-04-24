@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <butt buttname="Nemo" buttage=1></butt>
+        <butt buttname="Dory" buttage=3></butt>
+    <div class="row">
+
+            <card source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkvcAQrbh6liauFxwW6TADvIZJ4b67tGw4HEv3Bm07R1DtpHE9lA" text="A man and giant dog"></card>
+            <card text="Some rando dude doing this" source="https://s3.reutersmedia.net/resources/r/?d=20190301&i=RCV006ECK&w=&r=RCV006ECK&t=2"></card>
+            <card source="https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg" text="A guy on a cliff"></card>
+
+    </div>
+    </div>
+
+    <script>
+        Vue.component('butt', {
+            props: ['buttname', "buttage"],
+            template: `<button @click='count++'> {{buttname}} was clicked {{count}} times.</button>`,
+            data:function(){
+                return{
+                count: 0
+                }
+            }
+        })
+        Vue.component('card', {
+            props: ['source', 'text'],
+            template: ` <div class="card" style="width: 18rem;">
+                        <img :src="source" class="card-img-top" alt="Picture">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">{{text}}</p>
+                        <butt class="btn btn-primary">Go somewhere</butt>
+                        </div>
+                        </div>`
+        })
+
+        Vue.component('display', {
+            template: `                        
+                        <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        </div>
+                        </div>`
+
+                    })
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "Again"
+            }
+        })
+    </script>
+</body>
+
+</html>
