@@ -36,14 +36,16 @@ $(document).ready(function(){
     //     };
     //     };
     // };
-    
+    console.log(httpRequestAriane.readyState);
     console.log("HEY");
     
-        $("button.nextSix").click(function(){
+
             console.log("you made it here")
             var maxRocket = JSON.parse(httpRequestNextFive.responseText);
             var maxFive = maxRocket.count;
+            console.log(httpRequestNextFive.readyState)
             for(var i = 0; i<maxFive; i++){
+                console.log(httpRequestNextFive.readyState)
             if(httpRequestNextFive.readyState == 4 && httpRequestNextFive.status == 200){
                 console.log("can yo see this?");
                 var rocketObj = JSON.parse(httpRequestNextFive.responseText);
