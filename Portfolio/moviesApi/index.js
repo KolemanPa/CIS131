@@ -11,14 +11,18 @@ $(document).ready(function () {
     $("button.startOrder").click(function () {
         var maxRocket = JSON.parse(httpRequestMovies.responseText);
         var maxFive = maxRocket.count;
-        for (var i = 0; i < 4; i++) {
+        var amntOfMovie = 4;
+
+
+        for (var i = 0; i < amntOfMovie; i++) {
             var moviesObj = JSON.parse(httpRequestMovies.responseText);
             if (httpRequestMovies.readyState == 4 && httpRequestMovies.status == 200) {
-                document.getElementById('app').innerHTML +=
-                    "<card source=\"http://image.tmdb.org/t/p/w185/" + moviesObj.results[i].poster_path + "\" text=\"" + moviesObj.results[i].overview +"\" title=\""+moviesObj.results[i].title+"\"></card>"
+                document.getElementById('row').innerHTML +=
+                    "<card source=\"http://image.tmdb.org/t/p/w185/" + moviesObj.results[i].poster_path + "\" text=\"" + moviesObj.results[i].overview + "\" title=\"" + moviesObj.results[i].title + "\"></card>"
                 someVue();
             }
         }
+
     });
 
 
