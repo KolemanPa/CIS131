@@ -34,6 +34,9 @@
 
 $(document).ready(function () {
 
+
+    
+
     var hour = new Date().getHours();
     console.log(hour);
     console.log("hey");
@@ -59,7 +62,7 @@ $(document).ready(function () {
                 document.getElementById('row').innerHTML +=
                     "<card source=\"http://image.tmdb.org/t/p/w185/" + moviesObj.results[i].poster_path + "\" text=\"" + moviesObj.results[i].overview + "\" title=\"" + moviesObj.results[i].title + "\"></card>"
                 document.getElementById('tableSection').innerHTML +=    
-                    "<movietable title=\"" + moviesObj.results[i].title + "\" price=\"9.99\" mtitle=\"" + moviesObj.results[i].title + "\" mid=\"" +moviesObj.results[i].id +"\"></movietable>"
+                    "<movietable title=\"" + moviesObj.results[i].title + "\" price=\"9.99\"  mid=\"" +moviesObj.results[i].id +"\"></movietable>"
 
                 someVue();
 
@@ -91,7 +94,4 @@ $(document).ready(function () {
     
     });
     
-   
-
-
 });
