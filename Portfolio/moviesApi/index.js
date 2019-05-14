@@ -19,7 +19,6 @@ $(document).ready(function () {
                 document.getElementById('tableSection').innerHTML +=    
                     "<movietable title=\"" + moviesObj.results[i].title + "\" price=\"9.99\"  prop-mid=\"" +moviesObj.results[i].id +"\"></movietable>"
 
-                someVue();
 
             }
             someVue();
